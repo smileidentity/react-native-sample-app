@@ -1,0 +1,6 @@
+module Pods_SIDReactNativeSample_SIDReactNativeSampleTests {
+  umbrella header "Pods-SIDReactNativeSample-SIDReactNativeSampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
