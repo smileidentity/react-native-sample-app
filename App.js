@@ -17,7 +17,7 @@ import {
   Platform,
   ActionSheetIOS,
 } from 'react-native';
-import RnSmileId from 'rn-smile-id';
+import RnSmileId from 'arlon-test-library';
 
 export default function App() {
   const [modalVisible, setModalVisible] = React.useState(false);
@@ -297,6 +297,31 @@ export default function App() {
     ]);
   };
 
+  const consentDialog = () => {
+    const cats = [
+      {
+        "type": 1, 
+        "label": "Process your personal details",
+        "heading": "Personal||Details",
+        "content": "Partner can process your names, dob, and gender."
+      },
+      {
+        "type": 2, 
+        "label": "Process your contact information",
+        "heading": "Contact||Information",
+        "content": "Partner can process your phone numbers and address."
+      },
+      {
+        "type": 3, 
+        "label": "Process your document information",
+        "heading": "Document||Information",
+        "content": "Partner can process your Photo, ID expiration date, country of issuance, and document number."
+      }
+    ];
+
+    return RnSmileId.requestConsent("", "SID-Arlon", "www.google.com", "www.facebook.com", cats);
+  };
+
   return (
     <View style={styles.container}>
       {modal()}
@@ -325,7 +350,6 @@ export default function App() {
           <TouchableOpacity
             style={{ marginTop: 20 }}
             onPress={async () => {
-              console.log('Japhet hrere');
               try {
                 const data = await RnSmileId.captureSelfie('');
                 const resultCode = data.SID_RESULT_CODE;
@@ -356,27 +380,30 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
+              let dlgHeader = "User Consent";
               try {
+                const consent = await consentDialog();
+                dlgHeader = "ID Capture";
                 const data = await RnSmileId.captureIDCard('');
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
                   alertDialog(
-                    'ID Capture Success',
+                  `${dlgHeader}`,
                     `Successfully captured id card with tag ${resultTag}`
                   );
                   return;
                 }
                 setLoading(false);
                 alertDialog(
-                  'ID Capture Failed',
+                  `${dlgHeader}`,
                   `Failed id card capture with error ${resultCode} tag ${resultTag}`
                 );
               } catch (e) {
                 setLoading(false);
                 alertDialog(
-                  'ID Capture Failed',
-                  `Failed id capture with error`
+                  `${dlgHeader}`,
+                  `${e}`
                 );
               }
             }}
@@ -459,7 +486,10 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
+              let dlgHeader = "User Consent";
               try {
+                const consent = await consentDialog();
+                dlgHeader = "Enroll Failed";
                 const data = await RnSmileId.captureSelfieAndIDCard('');
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
@@ -480,14 +510,14 @@ export default function App() {
                 }
                 setLoading(false);
                 alertDialog(
-                  'Enroll Failed',
+                  `${dlgHeader}`,
                   `Failed enroll with error ${resultCode} tag ${resultTag}`
                 );
               } catch (e) {
                 setLoading(false);
                 alertDialog(
-                  'Enroll Failed',
-                  `Failed enroll with unexpected error`
+                  `${dlgHeader}`,
+                  `${e}`
                 );
               }
             }}
@@ -499,7 +529,10 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
+              let dlgHeader = "User Consent";
               try {
+                const consent = await consentDialog();
+                dlgHeader = "Enroll Failed";
                 const data = await RnSmileId.captureSelfie('');
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
@@ -510,14 +543,14 @@ export default function App() {
                 }
                 setLoading(false);
                 alertDialog(
-                  'Enroll Failed',
+                  `${dlgHeader}`,
                   `Failed enroll with error ${resultCode} tag ${resultTag}`
                 );
               } catch (e) {
                 setLoading(false);
                 alertDialog(
-                  'Enroll Failed',
-                  `Failed enroll with unexpected error`
+                  `${dlgHeader}`,
+                  `${e}`
                 );
               }
             }}
