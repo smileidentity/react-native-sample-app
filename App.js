@@ -635,10 +635,11 @@ const styles = StyleSheet.create({
     marginTop: 10,
     paddingLeft: 20,
     paddingRight: 20,
-    paddingTop: 10,
-    paddingBottom: 10,
-    backgroundColor: '#00f',
+    paddingTop: 16,
+    paddingBottom: 16,
+    backgroundColor: '#0A92D4',
     alignItems: 'center',
+    borderRadius: 16
   },
   buttonText: {
     color: '#fff',
