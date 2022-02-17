@@ -1,6 +1,0 @@
-module Pods_SIDReactNativeSample {
-  umbrella header "Pods-SIDReactNativeSample-umbrella.h"
-
-  export *
-  module * { export * }
-}

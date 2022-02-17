@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_SIDReactNativeSample_SIDReactNativeSampleTests : NSObject
-@end
-@implementation PodsDummy_Pods_SIDReactNativeSample_SIDReactNativeSampleTests
-@end

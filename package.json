@@ -1,5 +1,5 @@
 {
-  "name": "SIDReactNativeSample",
+  "name": "rn_example",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,19 +10,20 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "react": "17.0.1",
-    "react-native": "0.64.2",
-    "rn-smile-id": "^0.0.4"
+    "@react-native-picker/picker": "^2.2.1",
+    "react": "17.0.2",
+    "react-native": "0.67.2",
+    "react-native-smile-rn-lib": "^1.0.61"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/runtime": "^7.15.3",
-    "@react-native-community/eslint-config": "^3.0.0",
-    "babel-jest": "^27.0.6",
-    "eslint": "^7.32.0",
-    "jest": "^27.0.6",
-    "metro-react-native-babel-preset": "^0.66.2",
-    "react-test-renderer": "17.0.1"
+    "@babel/core": "^7.17.2",
+    "@babel/runtime": "^7.17.2",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.9.0",
+    "jest": "^27.5.1",
+    "metro-react-native-babel-preset": "^0.68.0",
+    "react-test-renderer": "17.0.2"
   },
   "jest": {
     "preset": "react-native"

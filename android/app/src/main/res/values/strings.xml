@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">SIDReactNativeSample</string>
+    <string name="app_name">Smile ID - React Demo</string>
+    <string name="test_url">https://portal.smileidentity.com/</string>
+    <string name="test_lambda_url">https://testapi.smileidentity.com/v1/</string>
+    <string name="prod_url">https://portal.smileidentity.com/</string>
+    <string name="prod_lambda_url">https://api.smileidentity.com/v1/</string>
+    <string name="auth_token">UVHCPj5jSmXnTrfpOgQ61mCUsth9c+79QGwpJmZfprkfWAJNl2L9yk+JiOY9ht3A5o2VkHqS5VMoDWZD7aeKCNf8VOt/qNmfO20VYXcj2aZJCH+GseHPKOTwPIn7+7hZP5p1pXa/Zhe6z6kwh4dlblrxEwuAgeG3P4DXd7BWiy8=</string>
+    <string name="partner_id">1046</string>
+    <string name="version">1.0.0</string>
 </resources>

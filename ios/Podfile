@@ -1,9 +1,9 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-platform :ios, '10.0'
+platform :ios, '11.0'
 
-target 'SIDReactNativeSample' do
+target 'rn_example' do
   config = use_native_modules!
 
   use_react_native!(
@@ -12,7 +12,9 @@ target 'SIDReactNativeSample' do
     :hermes_enabled => false
   )
 
-  target 'SIDReactNativeSampleTests' do
+  pod 'RNSmileRnLib', :path => '../node_modules/react-native-smile-rn-lib'
+
+  target 'rn_exampleTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -25,5 +27,6 @@ target 'SIDReactNativeSample' do
 
   post_install do |installer|
     react_native_post_install(installer)
+    __apply_Xcode_12_5_M1_post_install_workaround(installer)
   end
 end
