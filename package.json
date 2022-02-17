@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@react-native-picker/picker": "^2.2.1",
-    "react": "17.0.2",
+    "react": "^17.0.2",
     "react-native": "0.67.2",
     "react-native-smile-rn-lib": "^1.0.61"
   },
