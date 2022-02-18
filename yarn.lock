@@ -5478,10 +5478,10 @@ react-native-codegen@^0.0.8:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
-react-native-smile-rn-lib@^1.0.62:
-  version "1.0.62"
-  resolved "https://registry.yarnpkg.com/react-native-smile-rn-lib/-/react-native-smile-rn-lib-1.0.62.tgz#2ba840b65afad660586efc568e584f8c88a11805"
-  integrity sha512-UlpIppD4ssk7N6BbHt5FrE1Xigq0kWnRMv6N1D+G18zwP4OHNmfE4jYs0UizVSnxjKcIZ15SwBcPKSiQ2ZvweA==
+react-native-smile-rn-lib@^1.0.64:
+  version "1.0.64"
+  resolved "https://registry.yarnpkg.com/react-native-smile-rn-lib/-/react-native-smile-rn-lib-1.0.64.tgz#6a19c0a97a9be80cb2bf2940cdf8caff2211be76"
+  integrity sha512-p7bxn11CG6XRJ9ttpGZCCXH6Y/T7r1jX1V5+tjOQWMXXl3SAkntrzvX43bc4rjZ0YRrBDhbLoYfQSzMQt6p6Pw==
 
 react-native@0.67.2:
   version "0.67.2"
