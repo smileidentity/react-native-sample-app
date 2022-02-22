@@ -12,7 +12,6 @@ target 'rn_example' do
     :hermes_enabled => false
   )
 
-  # pod 'RNSmileRnLib', :path => '../node_modules/react-native-smile-rn-lib'
 
   target 'rn_exampleTests' do
     inherit! :complete
@@ -25,8 +24,12 @@ target 'rn_example' do
   # you should disable the next line.
   use_flipper!()
 
+  # use_flipper!({ 'Flipper' => '0.80.0' })
   post_install do |installer|
-    react_native_post_install(installer)
-    __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    flipper_post_install(installer)
+    `sed -i -e  $'s/__IPHONE_10_0/__IPHONE_12_0/' Pods/Flipper-Folly/folly/portability/Time.h`
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+    end
   end
 end
