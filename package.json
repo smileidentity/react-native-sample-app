@@ -14,7 +14,7 @@
     "@react-native-picker/picker": "^2.2.1",
     "react": "^17.0.2",
     "react-native": "0.67.2",
-    "react-native-smile-rn-lib": "^1.0.75"
+    "react-native-smile-rn-lib": "^1.0.76"
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
