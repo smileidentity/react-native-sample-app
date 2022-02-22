@@ -12,7 +12,7 @@ target 'rn_example' do
     :hermes_enabled => false
   )
 
-  pod 'RNSmileRnLib', :path => '../node_modules/react-native-smile-rn-lib'
+  # pod 'RNSmileRnLib', :path => '../node_modules/react-native-smile-rn-lib'
 
   target 'rn_exampleTests' do
     inherit! :complete

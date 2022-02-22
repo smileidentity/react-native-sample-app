@@ -14,6 +14,16 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		6172926747710DC1BC236FFF /* libPods-rn_example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE92F8D4957A9EE591DFF78 /* libPods-rn_example.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B094578927C4336400846F04 /* RnSmileId.m in Sources */ = {isa = PBXBuildFile; fileRef = B094578827C4336400846F04 /* RnSmileId.m */; };
+		B094578A27C4336400846F04 /* RnSmileId.m in Sources */ = {isa = PBXBuildFile; fileRef = B094578827C4336400846F04 /* RnSmileId.m */; };
+		B094578C27C433A900846F04 /* RnSmileId.swift in Sources */ = {isa = PBXBuildFile; fileRef = B094578B27C433A900846F04 /* RnSmileId.swift */; };
+		B094578D27C433A900846F04 /* RnSmileId.swift in Sources */ = {isa = PBXBuildFile; fileRef = B094578B27C433A900846F04 /* RnSmileId.swift */; };
+		B094578F27C4340B00846F04 /* SIDEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B094578E27C4340B00846F04 /* SIDEventEmitter.swift */; };
+		B094579027C4340B00846F04 /* SIDEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B094578E27C4340B00846F04 /* SIDEventEmitter.swift */; };
+		B094579227C4344000846F04 /* SIDReactNativeEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = B094579127C4344000846F04 /* SIDReactNativeEventEmitter.m */; };
+		B094579327C4344000846F04 /* SIDReactNativeEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = B094579127C4344000846F04 /* SIDReactNativeEventEmitter.m */; };
+		B094579527C4346300846F04 /* SIDReactNativeEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B094579427C4346300846F04 /* SIDReactNativeEventEmitter.swift */; };
+		B094579627C4346300846F04 /* SIDReactNativeEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B094579427C4346300846F04 /* SIDReactNativeEventEmitter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,12 @@
 		8CE92F8D4957A9EE591DFF78 /* libPods-rn_example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DBE78F86649CFE83AEC87B /* Pods-rn_example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_example.release.xcconfig"; path = "Target Support Files/Pods-rn_example/Pods-rn_example.release.xcconfig"; sourceTree = "<group>"; };
 		A8726D66677374AACEEAA2E5 /* Pods-rn_example-rn_exampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_example-rn_exampleTests.debug.xcconfig"; path = "Target Support Files/Pods-rn_example-rn_exampleTests/Pods-rn_example-rn_exampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B094578727C4331100846F04 /* RnSmileId-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RnSmileId-Bridging-Header.h"; sourceTree = "<group>"; };
+		B094578827C4336400846F04 /* RnSmileId.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RnSmileId.m; sourceTree = "<group>"; };
+		B094578B27C433A900846F04 /* RnSmileId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RnSmileId.swift; sourceTree = "<group>"; };
+		B094578E27C4340B00846F04 /* SIDEventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIDEventEmitter.swift; sourceTree = "<group>"; };
+		B094579127C4344000846F04 /* SIDReactNativeEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SIDReactNativeEventEmitter.m; sourceTree = "<group>"; };
+		B094579427C4346300846F04 /* SIDReactNativeEventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIDReactNativeEventEmitter.swift; sourceTree = "<group>"; };
 		CCE1A7C9B429779D4E580007 /* Pods-rn_example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_example.debug.xcconfig"; path = "Target Support Files/Pods-rn_example/Pods-rn_example.debug.xcconfig"; sourceTree = "<group>"; };
 		E1144151CADCBC09D85136E5 /* Pods-rn_example-rn_exampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_example-rn_exampleTests.release.xcconfig"; path = "Target Support Files/Pods-rn_example-rn_exampleTests/Pods-rn_example-rn_exampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		E551F3F201B3C30F4BFDD5D8 /* libPods-rn_example-rn_exampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_example-rn_exampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +105,12 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				B094578727C4331100846F04 /* RnSmileId-Bridging-Header.h */,
+				B094578827C4336400846F04 /* RnSmileId.m */,
+				B094578B27C433A900846F04 /* RnSmileId.swift */,
+				B094578E27C4340B00846F04 /* SIDEventEmitter.swift */,
+				B094579127C4344000846F04 /* SIDReactNativeEventEmitter.m */,
+				B094579427C4346300846F04 /* SIDReactNativeEventEmitter.swift */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -104,7 +126,6 @@
 				A8726D66677374AACEEAA2E5 /* Pods-rn_example-rn_exampleTests.debug.xcconfig */,
 				E1144151CADCBC09D85136E5 /* Pods-rn_example-rn_exampleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -205,10 +226,11 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 1320;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -403,7 +425,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B094579027C4340B00846F04 /* SIDEventEmitter.swift in Sources */,
+				B094578D27C433A900846F04 /* RnSmileId.swift in Sources */,
 				00E356F31AD99517003FC87E /* rn_exampleTests.m in Sources */,
+				B094579327C4344000846F04 /* SIDReactNativeEventEmitter.m in Sources */,
+				B094579627C4346300846F04 /* SIDReactNativeEventEmitter.swift in Sources */,
+				B094578A27C4336400846F04 /* RnSmileId.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +438,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B094579527C4346300846F04 /* SIDReactNativeEventEmitter.swift in Sources */,
+				B094578927C4336400846F04 /* RnSmileId.m in Sources */,
+				B094579227C4344000846F04 /* SIDReactNativeEventEmitter.m in Sources */,
+				B094578C27C433A900846F04 /* RnSmileId.swift in Sources */,
+				B094578F27C4340B00846F04 /* SIDEventEmitter.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -431,7 +463,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8726D66677374AACEEAA2E5 /* Pods-rn_example-rn_exampleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -450,6 +484,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rn_example.app/rn_example";
 			};
 			name = Debug;
@@ -458,7 +494,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1144151CADCBC09D85136E5 /* Pods-rn_example-rn_exampleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = rn_exampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -474,6 +512,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rn_example.app/rn_example";
 			};
 			name = Release;
