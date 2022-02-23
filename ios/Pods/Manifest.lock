@@ -339,8 +339,6 @@ PODS:
     - React-perflogger (= 0.67.2)
   - RNCPicker (2.2.1):
     - React-Core
-  - RNSmileRnLib (1.0.0):
-    - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -400,7 +398,6 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
-  - RNSmileRnLib (from `../node_modules/react-native-smile-rn-lib/ios`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -481,8 +478,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCPicker:
     :path: "../node_modules/@react-native-picker/picker"
-  RNSmileRnLib:
-    :path: "../node_modules/react-native-smile-rn-lib/ios"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -530,10 +525,9 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 2450b43df7ffe8e805a0b3dcb2abd4282f1f1836
   ReactCommon: d98c6c96b567f9b3a15f9fd4cc302c1eda8e3cf2
   RNCPicker: cb57c823d5ce8d2d0b5dfb45ad97b737260dc59e
-  RNSmileRnLib: 86297228d403d7df2df0ae5af6046ccd3aa2e29c
   Yoga: 9b6696970c3289e8dea34b3eda93f23e61fb8121
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: e1aed28f9f9bb3d7ec4363897a0a8b34a429d68d
+PODFILE CHECKSUM: 39771fbb733e2430175a5152e72d424cbe68a5c3
 
 COCOAPODS: 1.11.2

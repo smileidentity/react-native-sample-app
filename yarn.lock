@@ -5842,10 +5842,10 @@
     "jscodeshift" "^0.11.0"
     "nullthrows" "^1.1.1"
 
-"react-native-smile-rn-lib@^1.0.78":
-  "integrity" "sha512-WmgdCppt3IAH9JZtjWqOGb/n9FPQNIGYnfs+W4Ux4/8gg9ymNjMsJA5js5tYrzPdl6SCxXlCHwWMgqT1kAs8fw=="
-  "resolved" "https://registry.npmjs.org/react-native-smile-rn-lib/-/react-native-smile-rn-lib-1.0.78.tgz"
-  "version" "1.0.78"
+"react-native-smile-rn-lib@^1.0.81":
+  "integrity" "sha512-2W3TG8j8LIaSSots90KgHu3o3FLQnnEjy82aJSb+kHVwsIqXtfq3VZQvl71nZDxefBu8v7F5Qpl/WvN/upLocg=="
+  "resolved" "https://registry.npmjs.org/react-native-smile-rn-lib/-/react-native-smile-rn-lib-1.0.81.tgz"
+  "version" "1.0.81"
 
 "react-native@*", "react-native@>=0.57", "react-native@0.67.2":
   "integrity" "sha512-grEtpOLLvtSg8Bivg0ffVRCjTkresqMt7Jdog/geF6VAYhb4RnLaaUCWvyrfyB9buf135FKnqg5BIuve/XQNXA=="

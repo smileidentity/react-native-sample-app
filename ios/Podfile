@@ -28,8 +28,8 @@ target 'rn_example' do
   post_install do |installer|
     flipper_post_install(installer)
     `sed -i -e  $'s/__IPHONE_10_0/__IPHONE_12_0/' Pods/Flipper-Folly/folly/portability/Time.h`
-    installer.pods_project.build_configurations.each do |config|
-      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
-    end
+    # installer.pods_project.build_configurations.each do |config|
+    #   config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+    # end
   end
 end
