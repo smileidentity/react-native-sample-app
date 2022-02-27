@@ -110,9 +110,20 @@
 
 @implementation NSDate (SonarUtility)
 
-+ (NSTimeInterval)timestamp {
-  const NSTimeInterval timestamp = [[NSDate date] timeIntervalSince1970];
-  return timestamp * 1000;
++ (uint64_t)getTimeNanoseconds {
+  static struct mach_timebase_info tb_info = {0};
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    __unused int ret = mach_timebase_info(&tb_info);
+    assert(0 == ret);
+  });
+
+  return (mach_absolute_time() * tb_info.numer) / tb_info.denom;
+}
+
++ (uint64_t)timestamp {
+  const uint64_t nowNanoSeconds = [self getTimeNanoseconds];
+  return nowNanoSeconds / 1000000;
 }
 
 @end
