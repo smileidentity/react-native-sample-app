@@ -680,10 +680,10 @@ export default function App() {
               console.log(result.tags);
               console.log("SMILEID TAGS END");
 
-              const result2 = await RNSmileRnLibModule.getImagesForTag("USER_TAG_02_04_09_42_32");
-              console.log("SMILEID TAGS START");
-              console.log(result2);
-              console.log("SMILEID TAGS END");
+              // const result2 = await RNSmileRnLibModule.getImagesForTag("USER_TAG_02_04_09_42_32");
+              // console.log("SMILEID TAGS START");
+              // console.log(result2);
+              // console.log("SMILEID TAGS END");
             }}
           >
             <View style={[styles.textContainer]}>

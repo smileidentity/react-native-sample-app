@@ -1,5 +1,5 @@
 {
-  "name": "rn_example",
+  "name": "SID_RN_Sample",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "@react-native-picker/picker": "^2.2.1",
     "react": "^17.0.2",
     "react-native": "0.67.2",
-    "react-native-smile-rn-lib": "^1.0.84"
+    "react-native-smile-rn-lib": "^1.0.85"
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
