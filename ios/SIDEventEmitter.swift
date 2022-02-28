@@ -31,7 +31,7 @@ class SIDEventEmitter{
         var allEventNames: [String] = []
         allEventNames.append("CompleteListener")
         allEventNames.append("UploadListener")
-        allEventNames.append("UploadListener")
+        allEventNames.append("DocVerificationListener")
         
         return allEventNames
     }()

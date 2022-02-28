@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import React
 @objc(SIDReactNativeEventEmitter)
 open class SIDReactNativeEventEmitter: RCTEventEmitter {
     
