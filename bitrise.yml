@@ -373,10 +373,10 @@ app:
     VARIANT: release
   - opts:
       is_expand: false
-    BITRISE_PROJECT_PATH: ios/rn_example.xcworkspace
+    BITRISE_PROJECT_PATH: ios/SID_RN_Sample.xcworkspace
   - opts:
       is_expand: false
-    BITRISE_SCHEME: rn_example
+    BITRISE_SCHEME: MyReactNative
   - opts:
       is_expand: false
     BITRISE_DISTRIBUTION_METHOD: ad-hoc

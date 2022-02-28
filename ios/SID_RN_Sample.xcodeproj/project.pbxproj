@@ -12,7 +12,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-SID_RN_Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-SID_RN_Sample.a */; };
-		B00F6F1727CC7AFF00E25744 /* ios in Resources */ = {isa = PBXBuildFile; fileRef = B00F6F1627CC7AFF00E25744 /* ios */; };
 		B05A662E27CC003100048D02 /* SIDEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A662D27CC003100048D02 /* SIDEventEmitter.swift */; };
 		B05A663027CC00AC00048D02 /* SIDReactNativeEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A662F27CC00AC00048D02 /* SIDReactNativeEventEmitter.swift */; };
 		B05A663227CC00EC00048D02 /* SIDReactNativeEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = B05A663127CC00EC00048D02 /* SIDReactNativeEventEmitter.m */; };
@@ -159,6 +158,7 @@
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 99P7YGX9Q6;
 						LastSwiftMigration = 1320;
 					};
 				};
@@ -188,7 +188,6 @@
 			files = (
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				B00F6F1727CC7AFF00E25744 /* ios in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99P7YGX9Q6;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -388,6 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99P7YGX9Q6;
 				INFOPLIST_FILE = SID_RN_Sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
