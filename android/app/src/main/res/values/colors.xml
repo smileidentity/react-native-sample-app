@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <resources>
   <color name="splashscreen_background">#FFFFFF</color>
+  <color name="red_color">#FFFF0000</color>
+  <color name="green_color">#FF00FF00</color>
+  <color name="yellow_color">#FFFF00</color>
+  <color name="blue_color">#0ea5de</color>
+  <color name="trans_blue_color">#cc0ea5de</color>
 </resources>

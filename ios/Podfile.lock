@@ -394,7 +394,7 @@ PODS:
     - React-jsi (= 0.67.2)
     - React-logger (= 0.67.2)
     - React-perflogger (= 0.67.2)
-  - RNCPicker (2.3.0):
+  - RNCPicker (2.3.1):
     - React-Core
   - RNSmileRnLib (1.0.0):
     - React
@@ -617,8 +617,8 @@ SPEC CHECKSUMS:
   React-RCTVibration: 99c7f67fba7a5ade46e98e870c6ff2444484f995
   React-runtimeexecutor: 2450b43df7ffe8e805a0b3dcb2abd4282f1f1836
   ReactCommon: d98c6c96b567f9b3a15f9fd4cc302c1eda8e3cf2
-  RNCPicker: c796ddf16cd93e980a5a5642eebcee9eb9da1e76
-  RNSmileRnLib: 216f0989df75b4fdcd9402c9cff6422c0045b3dc
+  RNCPicker: f6c760d4b314585ff35165d8640d7917ae30afb1
+  RNSmileRnLib: b65a8e844dca325d201eed38a0841845745ba1a8
   Smile_Identity_SDK: ffd257a4a016aabde7525213003f9184e6a6ad9c
   Yoga: 9b6696970c3289e8dea34b3eda93f23e61fb8121
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a

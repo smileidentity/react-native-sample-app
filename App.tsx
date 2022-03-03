@@ -341,7 +341,45 @@ export default function App() {
   };
 
   const verifyDocument = async () => {
-    const data = await RNSmileRnLibModule.captureSelfieAndIDCard('');
+
+    const capture_prompt_style = {
+      text_size: 12,
+      color: "blue_color",
+      font_style: "bold"
+    };
+
+    const capture_tip_style = {
+      text_size: 14,
+      color: "green_color",
+      font_style: "italic"
+    };
+    
+    const config = {
+      overlay_color: "red_color",
+      overlay_alpha: 100,
+      overlay_thickness: 10,
+      overlay_dotted: true,
+      capturing_progress_color: "yellow_color",
+      captured_progress_color: "green_color",
+      android_is_capture_fullscreen: true,
+      prompt_default_text: "prompt_default_text",
+      prompt_blurry_text: "prompt_blurry_text",
+      prompt_capturing_text: "prompt_capturing_text",
+      prompt_do_smile_text: "prompt_do_smile_text",
+      prompt_compatibility_mode_text: "prompt_compatibility_mode_text",
+      prompt_face_not_found_text: "prompt_face_not_found_text",
+      prompt_face_too_close_text: "prompt_face_too_close_text",
+      prompt_idle_text: "prompt_idle_text",
+      prompt_move_closer_text: "prompt_move_closer_text",
+      prompt_too_dark_text: "prompt_too_dark_text",
+      capture_tip_text: "capture_tip_text",
+      capture_title_text: "capture_title_text",
+      android_capture_tip_style: "android_capture_tip_style",
+      capture_prompt_style: capture_prompt_style,
+      capture_tip_style: capture_tip_style
+    };
+
+    const data = await RNSmileRnLibModule.captureSelfieAndIDCard('', config);
     setLoading(true);
     const resultCode = data.SID_RESULT_CODE;
     const resultTag = data.SID_RESULT_TAG;
@@ -405,7 +443,43 @@ export default function App() {
             style={{ marginTop: 20 }}
             onPress={async () => {
               try {
-                const data = await RNSmileRnLibModule.captureSelfie('');
+                const capture_prompt_style = {
+                  text_size: 12,
+                  color: "blue_color",
+                  font_style: "bold"
+                };
+
+                const capture_tip_style = {
+                  text_size: 14,
+                  color: "green_color",
+                  font_style: "italic"
+                };
+                
+                const config = {
+                  overlay_color: "red_color",
+                  overlay_alpha: 100,
+                  overlay_thickness: 10,
+                  overlay_dotted: true,
+                  capturing_progress_color: "yellow_color",
+                  captured_progress_color: "green_color",
+                  android_is_capture_fullscreen: true,
+                  prompt_default_text: "prompt_default_text",
+                  prompt_blurry_text: "prompt_blurry_text",
+                  prompt_capturing_text: "prompt_capturing_text",
+                  prompt_do_smile_text: "prompt_do_smile_text",
+                  prompt_compatibility_mode_text: "prompt_compatibility_mode_text",
+                  prompt_face_not_found_text: "prompt_face_not_found_text",
+                  prompt_face_too_close_text: "prompt_face_too_close_text",
+                  prompt_idle_text: "prompt_idle_text",
+                  prompt_move_closer_text: "prompt_move_closer_text",
+                  prompt_too_dark_text: "prompt_too_dark_text",
+                  capture_tip_text: "capture_tip_text",
+                  capture_title_text: "capture_title_text",
+                  android_capture_tip_style: "android_capture_tip_style",
+                  capture_prompt_style: capture_prompt_style,
+                  capture_tip_style: capture_tip_style
+                };
+                const data = await RNSmileRnLibModule.captureSelfie('', config);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -437,7 +511,7 @@ export default function App() {
               let dlgHeader = "User Consent";
               try {
                 dlgHeader = "ID Capture";
-                const data = await RNSmileRnLibModule.captureIDCard('');
+                const data = await RNSmileRnLibModule.captureIDCard('', {});
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -471,7 +545,7 @@ export default function App() {
               let dlgHeader = "User Consent";
               try {
                 dlgHeader = "Selfie And ID Capture Failed";
-                const data = await RNSmileRnLibModule.captureSelfieAndIDCard('');
+                const data = await RNSmileRnLibModule.captureSelfieAndIDCard('', {});
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -503,7 +577,7 @@ export default function App() {
           <TouchableOpacity
             onPress={async () => {
               try {
-                const data = await RNSmileRnLibModule.captureSelfie('');
+                const data = await RNSmileRnLibModule.captureSelfie('', {});
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -545,7 +619,7 @@ export default function App() {
               let dlgHeader = "User Consent";
               try {
                 dlgHeader = "Enroll Failed";
-                const data = await RNSmileRnLibModule.captureSelfieAndIDCard('');
+                const data = await RNSmileRnLibModule.captureSelfieAndIDCard('', {});
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -589,7 +663,7 @@ export default function App() {
               try {
                 await consentDialog();
                 dlgHeader = "Enroll Failed";
-                const data = await RNSmileRnLibModule.captureSelfie('');
+                const data = await RNSmileRnLibModule.captureSelfie('', {});
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -628,7 +702,7 @@ export default function App() {
               }
 
               try {
-                const data = await RNSmileRnLibModule.captureSelfie('');
+                const data = await RNSmileRnLibModule.captureSelfie('', {});
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -675,15 +749,22 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
-              const result = await RNSmileRnLibModule.getCurrentTags();
-              console.log("SMILEID TAGS START");
-              console.log(result.tags);
-              console.log("SMILEID TAGS END");
+              try {
+                // const result = await RNSmileRnLibModule.getCurrentTags();
+                // console.log("SMILEID TAGS START");
+                // console.log(result.tags);
+                // console.log("SMILEID TAGS END");
 
-              // const result2 = await RNSmileRnLibModule.getImagesForTag("USER_TAG_02_04_09_42_32");
-              // console.log("SMILEID TAGS START");
-              // console.log(result2);
-              // console.log("SMILEID TAGS END");
+                // const result2 = await RNSmileRnLibModule.getImagesForTag("USER_TAG_02_04_09_42_32");
+                // console.log("SMILEID TAGS START");
+                // console.log(result2);
+                // console.log("SMILEID TAGS END");
+              } catch(e: Exception) {
+                alertDialog(
+                  "File Paths",
+                  `${e}`
+                );
+              }
             }}
           >
             <View style={[styles.textContainer]}>
