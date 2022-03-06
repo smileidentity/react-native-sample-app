@@ -1,5 +1,7 @@
 package com.rn_example;
 
+import android.util.Log;
+
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {

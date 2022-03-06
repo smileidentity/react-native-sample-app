@@ -443,27 +443,68 @@ export default function App() {
             style={{ marginTop: 20 }}
             onPress={async () => {
               try {
+                const screen_title_style = {
+                  text_size: 16,
+                  text_color: "#0ea5de", //blue_color
+                  font_style: "bold"
+                };
+
                 const capture_prompt_style = {
                   text_size: 12,
-                  color: "blue_color",
+                  text_color: "#0ea5de", //blue_color
                   font_style: "bold"
                 };
 
                 const capture_tip_style = {
                   text_size: 14,
-                  color: "green_color",
+                  text_color: "#00FF00", //green_color
                   font_style: "italic"
+                };
+
+                const review_prompt_style = {
+                  text_size: 16,
+                  text_color: "#0ea5de", //blue_color
+                  font_style: "bold"
+                };
+
+                const review_tip_style = {
+                  text_size: 8,
+                  text_color: "#00FF00", //green_color
+                  font_style: "italic"
+                };
+
+                const review_confirm_style = {
+                  text_size: 12,
+                  text_color: "#00FF00",
+                  font_style: "italic",
+                  width: 240,
+                  height: 84
+                };
+
+                const review_retake_style = {
+                  text_size: 12,
+                  text_color: "#FF0000",
+                  font_style: "normal",
+                  width: 360,
+                  height: 72
                 };
                 
                 const config = {
-                  overlay_color: "red_color",
+                  screen_title_style: screen_title_style,
+                  is_fullscreen: false,
+                  capture_title_text: "capture_title_text",
+
+                  overlay_color: "yellow_color", //red_color
                   overlay_alpha: 100,
                   overlay_thickness: 10,
                   overlay_dotted: true,
-                  capturing_progress_color: "yellow_color",
-                  captured_progress_color: "green_color",
-                  android_is_capture_fullscreen: true,
-                  prompt_default_text: "prompt_default_text",
+                  overlay_width: 260,
+                  overlay_height: 350,
+
+                  capturing_progress_color: "red_color", //yellow_color
+                  captured_progress_color: "green_color", //green_color
+
+                  prompt_default_text: "Smile for the camera",
                   prompt_blurry_text: "prompt_blurry_text",
                   prompt_capturing_text: "prompt_capturing_text",
                   prompt_do_smile_text: "prompt_do_smile_text",
@@ -473,11 +514,27 @@ export default function App() {
                   prompt_idle_text: "prompt_idle_text",
                   prompt_move_closer_text: "prompt_move_closer_text",
                   prompt_too_dark_text: "prompt_too_dark_text",
-                  capture_tip_text: "capture_tip_text",
-                  capture_title_text: "capture_title_text",
-                  android_capture_tip_style: "android_capture_tip_style",
+
                   capture_prompt_style: capture_prompt_style,
-                  capture_tip_style: capture_tip_style
+
+                  capture_tip_text: "capture_tip_text",
+                  capture_tip_style: capture_tip_style,
+
+                  review_title_text: "review_title_text",
+
+                  review_prompt_text: "review_prompt_text",
+                  review_prompt_style: review_prompt_style,
+
+                  review_tip_text: "review_tip_text",
+                  review_tip_style: review_tip_style,
+
+                  review_confirm_text: "review_confirm_text",
+                  review_confirm_color: "#0ea5de", //blue_color
+                  review_confirm_style: review_confirm_style,
+
+                  review_retake_text: "review_retake_text",
+                  review_retake_color: "#00FF00", //green_color
+                  review_retake_style: review_retake_style
                 };
                 const data = await RNSmileRnLibModule.captureSelfie('', config);
                 const resultCode = data.SID_RESULT_CODE;
@@ -754,6 +811,8 @@ export default function App() {
                 // console.log("SMILEID TAGS START");
                 // console.log(result.tags);
                 // console.log("SMILEID TAGS END");
+
+                const result = await RNSmileRnLibModule.testFun2();
 
                 // const result2 = await RNSmileRnLibModule.getImagesForTag("USER_TAG_02_04_09_42_32");
                 // console.log("SMILEID TAGS START");

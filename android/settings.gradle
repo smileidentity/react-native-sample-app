@@ -1,4 +1,8 @@
 rootProject.name = 'SID_RN_Sample'
+include ':react-native-smile-rn-lib'
+project(':react-native-smile-rn-lib').projectDir = new File(rootProject.projectDir, '../../smile_rn_lib/android')
+include ':react-native-smile-rn-lib'
+project(':react-native-smile-rn-lib').projectDir = new File(rootProject.projectDir, '../../smile_rn_lib/android')
 
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 

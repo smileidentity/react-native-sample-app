@@ -7,6 +7,9 @@
     <string name="auth_token">UVHCPj5jSmXnTrfpOgQ61mCUsth9c+79QGwpJmZfprkfWAJNl2L9yk+JiOY9ht3A5o2VkHqS5VMoDWZD7aeKCNf8VOt/qNmfO20VYXcj2aZJCH+GseHPKOTwPIn7+7hZP5p1pXa/Zhe6z6kwh4dlblrxEwuAgeG3P4DXd7BWiy8=</string>
     <string name="partner_id">1046</string>
     <string name="version">1.0.0</string>
+    
+    <string name="capture_title_text">Selfie Capture</string>
+
     <string name="prompt_default_text">Smile for the camera</string>
     <string name="prompt_blurry_text">Smile for the camera</string>
     <string name="prompt_capturing_text">Smile for the camera</string>
@@ -16,6 +19,17 @@
     <string name="prompt_face_too_close_text">Smile for the camera</string>
     <string name="prompt_idle_text">Smile for the camera</string>
     <string name="prompt_move_closer_text">Smile for the camera</string>
-    <string name="capture_tip_text">Smile for the camera</string>
-    <string name="capture_title_text">Smile for the camera</string>
+    <string name="prompt_too_dark_text">Smile for the camera</string>
+
+    <string name="capture_tip_text">Tips: Put your face inside the oval frame and wait until it turns blueTips: Put your face inside the oval frame and wait until it turns blue</string>
+    
+    <string name="review_title_text">Reviewing Selfie...</string>
+
+    <string name="review_prompt_text">Is this fine?</string>
+
+    <string name="review_tip_text">Ensure your face is clear enough...</string>
+
+    <string name="review_confirm_text">FINE WITH THIS?</string>
+
+    <string name="review_retake_text">CANCEL</string>
 </resources>

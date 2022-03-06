@@ -12,6 +12,7 @@ target 'SID_RN_Sample' do
   )
 
   use_flipper!()
+
   post_install do |installer|
     flipper_post_install(installer)
     `sed -i -e  $'s/__IPHONE_10_0/__IPHONE_12_0/' Pods/Flipper-Folly/folly/portability/Time.h`
