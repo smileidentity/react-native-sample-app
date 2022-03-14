@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import RNSmileRnLibModule from 'react-native-smile-rn-lib';
+import RNSmileRnLibModule from 'rn-smile-id';
 
 import {
   StyleSheet,
@@ -450,90 +450,96 @@ export default function App() {
                 };
 
                 const capture_prompt_style = {
-                  text_size: 12,
-                  text_color: "#0ea5de", //blue_color
+                  text_size: 16,
+                  text_color: "#FFFF00", //blue_color
                   font_style: "bold"
                 };
 
                 const capture_tip_style = {
                   text_size: 14,
-                  text_color: "#00FF00", //green_color
-                  font_style: "italic"
+                  text_color: "#0000FF", //green_color
+                  font_style: "italic",
+                  font_name: "bhutuka"
                 };
 
                 const review_prompt_style = {
-                  text_size: 16,
-                  text_color: "#0ea5de", //blue_color
+                  text_size: 24,
+                  text_color: "#FF0000", //blue_color
                   font_style: "bold"
                 };
 
                 const review_tip_style = {
-                  text_size: 8,
-                  text_color: "#00FF00", //green_color
-                  font_style: "italic"
+                  text_size: 14,
+                  text_color: "#0000FF", //green_color
+                  font_style: "bold"
                 };
 
                 const review_confirm_style = {
-                  text_size: 12,
-                  text_color: "#00FF00",
-                  font_style: "italic",
-                  width: 240,
-                  height: 84
+                  text_size: 16,
+                  text_color: "#0000FF",
+                  font_style: "normal",
+                  width: 360,
+                  height: 100
                 };
 
                 const review_retake_style = {
-                  text_size: 12,
-                  text_color: "#FF0000",
-                  font_style: "normal",
-                  width: 360,
-                  height: 72
+                  text_size: 20,
+                  text_color: "#FFFFFF",
+                  font_style: "bold",
+                  width: 200,
+                  height: 120
+                };
+
+                const review_retake_state = {
+                  highlighted: "#FF0000",
+                  selected: "#00FF00"
                 };
                 
                 const config = {
                   screen_title_style: screen_title_style,
-                  is_fullscreen: false,
-                  capture_title_text: "capture_title_text",
+                  is_fullscreen: true,
+                  capture_title_text: "Capturing your smile...",
 
-                  overlay_color: "yellow_color", //red_color
-                  overlay_alpha: 100,
+                  overlay_color: "#FF0000", //red_color
+                  overlay_alpha: 50,
                   overlay_thickness: 10,
                   overlay_dotted: true,
-                  overlay_width: 260,
-                  overlay_height: 350,
+                  overlay_width: 240,
+                  overlay_height: 300,
 
-                  capturing_progress_color: "red_color", //yellow_color
-                  captured_progress_color: "green_color", //green_color
+                  capturing_progress_color: "yellow_color", //yellow_color
+                  captured_progress_color: "blue_color", //green_color
 
                   prompt_default_text: "Smile for the camera",
-                  prompt_blurry_text: "prompt_blurry_text",
-                  prompt_capturing_text: "prompt_capturing_text",
-                  prompt_do_smile_text: "prompt_do_smile_text",
+                  prompt_blurry_text: "This is blurry",
+                  prompt_capturing_text: "We are capturing...",
+                  prompt_do_smile_text: "Show us that big smile",
                   prompt_compatibility_mode_text: "prompt_compatibility_mode_text",
                   prompt_face_not_found_text: "prompt_face_not_found_text",
-                  prompt_face_too_close_text: "prompt_face_too_close_text",
-                  prompt_idle_text: "prompt_idle_text",
-                  prompt_move_closer_text: "prompt_move_closer_text",
-                  prompt_too_dark_text: "prompt_too_dark_text",
+                  prompt_face_too_close_text: "Move back a little bit",
+                  prompt_idle_text: "You are not on the screen",
+                  prompt_move_closer_text: "Come closer to the camera",
+                  prompt_too_dark_text: "The picture is too dark",
 
                   capture_prompt_style: capture_prompt_style,
 
-                  capture_tip_text: "capture_tip_text",
+                  capture_tip_text: "This is where you capture your picture!!!",
                   capture_tip_style: capture_tip_style,
 
                   review_title_text: "review_title_text",
 
-                  review_prompt_text: "review_prompt_text",
+                  review_prompt_text: "Okay with this pix?",
                   review_prompt_style: review_prompt_style,
 
-                  review_tip_text: "review_tip_text",
+                  review_tip_text: "Make sure you are happy...",
                   review_tip_style: review_tip_style,
 
-                  review_confirm_text: "review_confirm_text",
-                  review_confirm_color: "#0ea5de", //blue_color
+                  review_confirm_text: "ARE YOU OKAY",
+                  review_confirm_color: "#FF0000", //blue_color
                   review_confirm_style: review_confirm_style,
 
-                  review_retake_text: "review_retake_text",
-                  review_retake_color: "#00FF00", //green_color
+                  review_retake_text: "RETAKE",
+                  review_retake_color: "#FFFF00", //green_color
                   review_retake_style: review_retake_style
                 };
                 const data = await RNSmileRnLibModule.captureSelfie('', config);
