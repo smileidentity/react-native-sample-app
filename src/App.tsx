@@ -9,7 +9,6 @@ import {
   NativeEventEmitter,
   NativeModules,
   Modal,
-  Image,
   TextInput,
   Picker,
   ActivityIndicator,
@@ -18,14 +17,14 @@ import {
   Platform,
   ActionSheetIOS,
 } from 'react-native';
-
 import RnSmileId from 'rn-smile-id';
 
 export default function App() {
   const [modalVisible, setModalVisible] = React.useState(false);
+  const [docVModalVisible, setDocVMModalVisible] = React.useState(false);
   const [progress, setProgress] = React.useState(0);
   const [loading, setLoading] = React.useState(false);
-  const [complete, setComplete] = React.useState(false);
+  // const [complete, setComplete] = React.useState(false);
 
   const [country, setCountry] = React.useState('');
   const [idType, setIdType] = React.useState('');
@@ -58,7 +57,7 @@ export default function App() {
       NativeModules.SIDReactNativeEventEmitter
     );
     eventEmitter.addListener('CompleteListener', (event) => {
-      setComplete(event.status);
+      console.log(event.status);
     });
     eventEmitter.addListener('UploadListener', (event) => {
       setProgress(event.status);
@@ -95,7 +94,7 @@ export default function App() {
     ) : (
       <Picker
         selectedValue={country}
-        onValueChange={(itemValue, itemIndex) => setCountry(itemValue)}
+        onValueChange={(itemValue) => setCountry(itemValue)}
       >
         <Picker.Item label="SELECT COUNTRY" value="SELECT" />
         <Picker.Item label="Ghana" value="GH" />
@@ -136,7 +135,7 @@ export default function App() {
     ) : (
       <Picker
         selectedValue={idType}
-        onValueChange={(itemValue, itemIndex) => setIdType(itemValue)}
+        onValueChange={(itemValue) => setIdType(itemValue)}
       >
         <Picker.Item label="SELECT ID TYPE" value="SELECT" />
         <Picker.Item label="Driver's License" value="DRIVERS_LICENSE" />
@@ -157,7 +156,7 @@ export default function App() {
   const modal = () => {
     return (
       <Modal
-        style={{ alignItems: 'center', justifyContent: 'center', margin: 40 }}
+        // style={{ alignItems: 'center', justifyContent: 'center', margin: 40 }}
         animationType="slide"
         transparent={false}
         visible={modalVisible}
@@ -221,13 +220,13 @@ export default function App() {
                 {},
                 idInfo,
                 {},
-                ""
+                ''
               );
               await processResponse(result);
               setLoading(false);
-            } catch (e) {
+            } catch (e: any) {
               setLoading(false);
-              {}   alertDialog(
+              alertDialog(
                 'Enrol Failed',
                 `Enrol failed with error ${e.errorCode} tag ${e.message}`
               );
@@ -242,7 +241,60 @@ export default function App() {
     );
   };
 
-  const savePartnerParams = async (userId, jobId) => {
+  const docVModal = () => {
+    return (
+      <Modal
+        // style={{ alignItems: 'center', justifyContent: 'center', margin: 40 }}
+        animationType="slide"
+        transparent={false}
+        visible={docVModalVisible}
+        onRequestClose={() => {
+          setDocVMModalVisible(false);
+        }}
+      >
+        <PickerCountry />
+        <PickerIdType />
+
+        <TouchableOpacity
+          onPress={async () => {
+            setDocVMModalVisible(false);
+            const idInfo = {
+              country: country,
+              id_type: idType,
+              use_enrolled_image: false,
+              test_extra: 'test_extra',
+            };
+            setLoading(true);
+            try {
+              const result = await RnSmileId.submitJob(
+                pendingTag,
+                6,
+                isProduction,
+                {},
+                idInfo,
+                {},
+                ''
+              );
+              await processResponse(result);
+              setLoading(false);
+            } catch (e: any) {
+              setLoading(false);
+              alertDialog(
+                'Document verification Failed',
+                `Document verification failed with error ${e.errorCode} tag ${e.message}`
+              );
+            }
+          }}
+        >
+          <View style={[styles.textContainer]}>
+            <Text style={[styles.buttonText]}>Submit</Text>
+          </View>
+        </TouchableOpacity>
+      </Modal>
+    );
+  };
+
+  const savePartnerParams = async (userId: string, jobId: string) => {
     try {
       await AsyncStorage.setItem('@SIDReactExample:userId', userId);
       await AsyncStorage.setItem('@SIDReactExample:jobId', jobId);
@@ -265,7 +317,7 @@ export default function App() {
     return null;
   };
 
-  const processResponse = async (result) => {
+  const processResponse = async (result: any) => {
     console.log(result);
     if (result.job_success) {
       if (result.result.ResultCode && result.result.ResultText) {
@@ -288,7 +340,7 @@ export default function App() {
     }
   };
 
-  const alertDialog = (title, message) => {
+  const alertDialog = (title: string, message: string) => {
     Alert.alert(title, message, [
       {
         text: 'Cancel',
@@ -299,12 +351,22 @@ export default function App() {
     ]);
   };
 
-  const consentDialog = () => RnSmileId.requestConsent("USER_ID_001", "ic_mushroom", "com.example.rnsmileid", "SID-Arlon", "www.google.com");
+  const consentDialog = () =>
+    RnSmileId.requestConsent(
+      'USER_ID_001',
+      'ic_mushroom',
+      'com.example.rnsmileid',
+      'SID-Arlon',
+      'www.google.com'
+    );
 
   return (
     <View style={styles.container}>
       {modal()}
-      {loading && <Text style={styles.textStyle}>Progress : {progress}</Text>}
+      {docVModal()}
+      {loading && (
+        <Text style={styles.textContainer}>Progress : {progress}</Text>
+      )}
       {loading && <ActivityIndicator size="large" color="#00ff00" />}
       {!loading && (
         <View>
@@ -330,7 +392,10 @@ export default function App() {
             style={{ marginTop: 20 }}
             onPress={async () => {
               try {
-                const data = await RnSmileId.captureSelfie('');
+                const config = {
+                  prompt_default_text: 'Here we smile',
+                };
+                const data = await RnSmileId.captureSelfie('', config);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -359,16 +424,16 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
-              let dlgHeader = "User Consent";
+              let dlgHeader = 'User Consent';
               try {
                 await consentDialog();
-                dlgHeader = "ID Capture";
+                dlgHeader = 'ID Capture';
                 const data = await RnSmileId.captureIDCard('');
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
                   alertDialog(
-                  `${dlgHeader}`,
+                    `${dlgHeader}`,
                     `Successfully captured id card with tag ${resultTag}`
                   );
                   return;
@@ -380,10 +445,7 @@ export default function App() {
                 );
               } catch (e) {
                 setLoading(false);
-                alertDialog(
-                  `${dlgHeader}`,
-                  `${e}`
-                );
+                alertDialog(`${dlgHeader}`, `${e}`);
               }
             }}
           >
@@ -394,11 +456,11 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
-              let dlgHeader = "User Consent";
+              let dlgHeader = 'User Consent';
               try {
                 await consentDialog();
-                dlgHeader = "Selfie And ID Capture Failed";
-                const data = await RnSmileId.captureSelfieAndIDCard('');
+                dlgHeader = 'Selfie And ID Capture Failed';
+                const data = await RnSmileId.captureSelfieAndIDCard('', null);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -415,10 +477,7 @@ export default function App() {
                 );
               } catch (e) {
                 setLoading(false);
-                alertDialog(
-                  `${dlgHeader}`,
-                  `${e}`
-                );
+                alertDialog(`${dlgHeader}`, `${e}`);
               }
             }}
           >
@@ -430,7 +489,7 @@ export default function App() {
           <TouchableOpacity
             onPress={async () => {
               try {
-                const data = await RnSmileId.captureSelfie('');
+                const data = await RnSmileId.captureSelfie('', null);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -442,7 +501,7 @@ export default function App() {
                     {},
                     {},
                     {},
-                    ""
+                    ''
                   );
                   await processResponse(result);
                   setLoading(false);
@@ -469,11 +528,11 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
-              let dlgHeader = "User Consent";
+              let dlgHeader = 'User Consent';
               try {
                 await consentDialog();
-                dlgHeader = "Enroll Failed";
-                const data = await RnSmileId.captureSelfieAndIDCard('');
+                dlgHeader = 'Enroll Failed';
+                const data = await RnSmileId.captureSelfieAndIDCard('', null);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -485,7 +544,7 @@ export default function App() {
                     {},
                     {},
                     {},
-                    ""
+                    ''
                   );
 
                   await processResponse(result);
@@ -499,10 +558,7 @@ export default function App() {
                 );
               } catch (e) {
                 setLoading(false);
-                alertDialog(
-                  `${dlgHeader}`,
-                  `${e}`
-                );
+                alertDialog(`${dlgHeader}`, `${e}`);
               }
             }}
           >
@@ -513,11 +569,41 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
-              let dlgHeader = "User Consent";
+              let dlgHeader = 'User Consent';
               try {
                 await consentDialog();
-                dlgHeader = "Enroll Failed";
-                const data = await RnSmileId.captureSelfie('');
+                dlgHeader = 'Enroll Failed';
+                const data = await RnSmileId.captureSelfieAndIDCard('', null);
+                const resultCode = data.SID_RESULT_CODE;
+                const resultTag = data.SID_RESULT_TAG;
+                if (resultCode === -1) {
+                  setPendingTag(resultTag);
+                  setDocVMModalVisible(true);
+                  return;
+                }
+                setLoading(false);
+                alertDialog(
+                  `${dlgHeader}`,
+                  `Failed document verification with error ${resultCode} tag ${resultTag}`
+                );
+              } catch (e) {
+                setLoading(false);
+                alertDialog(`${dlgHeader}`, `${e}`);
+              }
+            }}
+          >
+            <View style={[styles.textContainer]}>
+              <Text style={[styles.buttonText]}>Document Verification</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={async () => {
+              let dlgHeader = 'User Consent';
+              try {
+                await consentDialog();
+                dlgHeader = 'Enroll Failed';
+                const data = await RnSmileId.captureSelfie('', null);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -532,10 +618,7 @@ export default function App() {
                 );
               } catch (e) {
                 setLoading(false);
-                alertDialog(
-                  `${dlgHeader}`,
-                  `${e}`
-                );
+                alertDialog(`${dlgHeader}`, `${e}`);
               }
             }}
           >
@@ -556,7 +639,7 @@ export default function App() {
               }
 
               try {
-                const data = await RnSmileId.captureSelfie('');
+                const data = await RnSmileId.captureSelfie('', null);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -571,7 +654,7 @@ export default function App() {
                       },
                       {},
                       {},
-                      ""
+                      ''
                     );
                     await processResponse(result);
                     setLoading(false);
@@ -600,18 +683,19 @@ export default function App() {
             </View>
           </TouchableOpacity>
 
-
           <TouchableOpacity
             onPress={async () => {
               const result = await RnSmileId.getCurrentTags();
-              console.log("SMILEID TAGS START");
+              console.log('SMILEID TAGS START');
               console.log(result.tags);
-              console.log("SMILEID TAGS END");
+              console.log('SMILEID TAGS END');
 
-              const result2 = await RnSmileId.getImagesForTag("USER_TAG_02_04_09_42_32");
-              console.log("SMILEID TAGS START");
+              const result2 = await RnSmileId.getImagesForTag(
+                'USER_TAG_02_04_09_42_32'
+              );
+              console.log('SMILEID TAGS START');
               console.log(result2);
-              console.log("SMILEID TAGS END");
+              console.log('SMILEID TAGS END');
             }}
           >
             <View style={[styles.textContainer]}>
@@ -643,7 +727,7 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
     backgroundColor: '#0A92D4',
     alignItems: 'center',
-    borderRadius: 16
+    borderRadius: 16,
   },
   buttonText: {
     color: '#fff',
