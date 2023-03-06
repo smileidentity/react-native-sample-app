@@ -14,13 +14,14 @@
 		1E9970FE2742A56B009C0AF2 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
 		1EF617B22680D1AC00156C97 /* EmptyReactFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF617B12680D1AC00156C97 /* EmptyReactFile.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		C8BE30C713D9E59C6BC9D8DE /* libPods-RnSmileIdExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F190D484AFA59CC7DF771B20 /* libPods-RnSmileIdExample.a */; };
+		B21B7B04FCB58835C809D4F2 /* libPods-RnSmileIdExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 772D3B3A858A38A9ADEEE4CF /* libPods-RnSmileIdExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RnSmileIdExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RnSmileIdExampleTests.m; sourceTree = "<group>"; };
+		01134B685C250E732BC49D8A /* Pods-RnSmileIdExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnSmileIdExample.release.xcconfig"; path = "Target Support Files/Pods-RnSmileIdExample/Pods-RnSmileIdExample.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RnSmileIdExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RnSmileIdExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RnSmileIdExample/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RnSmileIdExample/AppDelegate.m; sourceTree = "<group>"; };
@@ -30,12 +31,11 @@
 		1E972FA52685FF5000DDB57F /* smile_config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smile_config.json; sourceTree = "<group>"; };
 		1EF617B02680D1AC00156C97 /* RnSmileIdExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RnSmileIdExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		1EF617B12680D1AC00156C97 /* EmptyReactFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyReactFile.swift; sourceTree = "<group>"; };
+		772D3B3A858A38A9ADEEE4CF /* libPods-RnSmileIdExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnSmileIdExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RnSmileIdExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8795BFC09972B209837B5B4F /* Pods-RnSmileIdExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnSmileIdExample.debug.xcconfig"; path = "Target Support Files/Pods-RnSmileIdExample/Pods-RnSmileIdExample.debug.xcconfig"; sourceTree = "<group>"; };
+		DEC75FEF1C5C61B6EEB68DD7 /* Pods-RnSmileIdExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnSmileIdExample.debug.xcconfig"; path = "Target Support Files/Pods-RnSmileIdExample/Pods-RnSmileIdExample.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F190D484AFA59CC7DF771B20 /* libPods-RnSmileIdExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnSmileIdExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F578376790706AC61966DEE5 /* Pods-RnSmileIdExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnSmileIdExample.release.xcconfig"; path = "Target Support Files/Pods-RnSmileIdExample/Pods-RnSmileIdExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8BE30C713D9E59C6BC9D8DE /* libPods-RnSmileIdExample.a in Frameworks */,
+				B21B7B04FCB58835C809D4F2 /* libPods-RnSmileIdExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				F190D484AFA59CC7DF771B20 /* libPods-RnSmileIdExample.a */,
+				772D3B3A858A38A9ADEEE4CF /* libPods-RnSmileIdExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,8 +97,8 @@
 		6B9684456A2045ADE5A6E47E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8795BFC09972B209837B5B4F /* Pods-RnSmileIdExample.debug.xcconfig */,
-				F578376790706AC61966DEE5 /* Pods-RnSmileIdExample.release.xcconfig */,
+				DEC75FEF1C5C61B6EEB68DD7 /* Pods-RnSmileIdExample.debug.xcconfig */,
+				01134B685C250E732BC49D8A /* Pods-RnSmileIdExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -140,14 +140,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RnSmileIdExample" */;
 			buildPhases = (
-				4B12303C268E562A8816C8BB /* [CP] Check Pods Manifest.lock */,
+				BF069F8AAE0C136866F46BD1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				47EDA4029A916D3AC1447F28 /* [CP] Embed Pods Frameworks */,
-				0E8712BFA26A063D9953E0A7 /* [CP] Copy Pods Resources */,
+				DEED31C40281DBFF3215E009 /* [CP] Embed Pods Frameworks */,
+				3B2E43E8832D089E4962C22F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,7 +219,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		0E8712BFA26A063D9953E0A7 /* [CP] Copy Pods Resources */ = {
+		3B2E43E8832D089E4962C22F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,12 +228,23 @@
 				"${PODS_ROOT}/Target Support Files/Pods-RnSmileIdExample/Pods-RnSmileIdExample-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/MLKitFaceDetection/GoogleMVFaceDetectorResources.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/BVNConsent.storyboardc/3Kr-fN-f26-view-0HN-sT-YXu.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/BVNConsent.storyboardc/BVNConsentMode.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/BVNConsent.storyboardc/SIDBVNModeConsentScreenViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/BVNConsent.storyboardc/SIDBVNNumberConsentScreenViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/BVNConsent.storyboardc/SIDBVNOTPConsentScreenViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/BVNConsent.storyboardc/Wu4-ng-fey-view-MAm-Zw-kd5.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/BVNConsent.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/cancel.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/cancel_icon.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/ConsentActionsTableViewCell.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/ConsentAlertViewController.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/ConsentHeaderTableViewCell.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/ConsentInfoTableViewCell.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/ConsentItemTableViewCell.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/consent_message_indicator.png",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/consent_selected_indicator.png",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/consent_select_indicator.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/ic_close.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/ic_contact_info.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/ic_doc_info.png",
@@ -242,14 +253,31 @@
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/ic_security_icon.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/img_smile_power.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/logo.png",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/Modules/Smile_Identity_SDK.swiftmodule/arm64-apple-ios.abi.json",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/SIDConsentBVNNumberViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/SIDConsentScreenViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/SIDIDCardViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/SIDSelfieReviewViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/SIDSelfieViewController.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/smile_logo.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/tick.png",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/BVNConsent.storyboardc/3Kr-fN-f26-view-0HN-sT-YXu.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/BVNConsent.storyboardc/BVNConsentMode.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/BVNConsent.storyboardc/SIDBVNModeConsentScreenViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/BVNConsent.storyboardc/SIDBVNNumberConsentScreenViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/BVNConsent.storyboardc/SIDBVNOTPConsentScreenViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/BVNConsent.storyboardc/Wu4-ng-fey-view-MAm-Zw-kd5.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/BVNConsent.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/cancel.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/cancel_icon.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/ConsentActionsTableViewCell.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/ConsentAlertViewController.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/ConsentHeaderTableViewCell.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/ConsentInfoTableViewCell.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/ConsentItemTableViewCell.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/consent_message_indicator.png",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/consent_selected_indicator.png",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/consent_select_indicator.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/ic_close.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/ic_contact_info.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/ic_doc_info.png",
@@ -258,29 +286,38 @@
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/ic_security_icon.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/img_smile_power.png",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/logo.png",
-				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/smile_logo.png",
-				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/tick.png",
-				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/ConsentAlertViewController.nib",
-				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/SIDConsentScreenViewController.nib",
-				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/SIDIDCardViewController.nib",
-				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/SIDSelfieReviewViewController.nib",
-				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/SIDSelfieViewController.nib",
-				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/ConsentAlertViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/Modules/Smile_Identity_SDK.swiftmodule/x86_64-apple-ios-simulator.abi.json",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/SIDConsentBVNNumberViewController.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/SIDConsentScreenViewController.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/SIDIDCardViewController.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/SIDSelfieReviewViewController.nib",
 				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/SIDSelfieViewController.nib",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/smile_logo.png",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/tick.png",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-arm64/Smile_Identity_SDK.framework/BVNConsent.storyboardc",
+				"${PODS_ROOT}/Smile_Identity_SDK/Smile_Identity_SDK.xcframework/ios-x86_64-simulator/Smile_Identity_SDK.framework/BVNConsent.storyboardc",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/3Kr-fN-f26-view-0HN-sT-YXu.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BVNConsentMode.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SIDBVNModeConsentScreenViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SIDBVNNumberConsentScreenViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SIDBVNOTPConsentScreenViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Wu4-ng-fey-view-MAm-Zw-kd5.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cancel.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cancel_icon.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ConsentActionsTableViewCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ConsentAlertViewController.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ConsentHeaderTableViewCell.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ConsentInfoTableViewCell.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ConsentItemTableViewCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/consent_message_indicator.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/consent_selected_indicator.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/consent_select_indicator.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ic_close.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ic_contact_info.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ic_doc_info.png",
@@ -289,38 +326,23 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ic_security_icon.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/img_smile_power.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/logo.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/smile_logo.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tick.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ConsentAlertViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arm64-apple-ios.abi.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SIDConsentBVNNumberViewController.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SIDConsentScreenViewController.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SIDIDCardViewController.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SIDSelfieReviewViewController.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SIDSelfieViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/smile_logo.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tick.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/x86_64-apple-ios-simulator.abi.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BVNConsent.storyboardc",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RnSmileIdExample/Pods-RnSmileIdExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		47EDA4029A916D3AC1447F28 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RnSmileIdExample/Pods-RnSmileIdExample-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RnSmileIdExample/Pods-RnSmileIdExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4B12303C268E562A8816C8BB /* [CP] Check Pods Manifest.lock */ = {
+		BF069F8AAE0C136866F46BD1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,6 +362,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEED31C40281DBFF3215E009 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RnSmileIdExample/Pods-RnSmileIdExample-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RnSmileIdExample/Pods-RnSmileIdExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -379,14 +419,14 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8795BFC09972B209837B5B4F /* Pods-RnSmileIdExample.debug.xcconfig */;
+			baseConfigurationReference = DEC75FEF1C5C61B6EEB68DD7 /* Pods-RnSmileIdExample.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99P7YGX9Q6;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386";
 				INFOPLIST_FILE = RnSmileIdExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -409,7 +449,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F578376790706AC61966DEE5 /* Pods-RnSmileIdExample.release.xcconfig */;
+			baseConfigurationReference = 01134B685C250E732BC49D8A /* Pods-RnSmileIdExample.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

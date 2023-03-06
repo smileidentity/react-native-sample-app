@@ -221,13 +221,15 @@ export default function App() {
                 {},
                 idInfo,
                 {},
-                ""
+                ''
               );
               await processResponse(result);
               setLoading(false);
             } catch (e) {
               setLoading(false);
-              {}   alertDialog(
+              {
+              }
+              alertDialog(
                 'Enrol Failed',
                 `Enrol failed with error ${e.errorCode} tag ${e.message}`
               );
@@ -299,7 +301,14 @@ export default function App() {
     ]);
   };
 
-  const consentDialog = () => RnSmileId.requestConsent("USER_ID_001", "ic_mushroom", "com.example.rnsmileid", "SID-Arlon", "www.google.com");
+  const consentDialog = () =>
+    RnSmileId.requestConsent(
+      'USER_ID_001',
+      'ic_mushroom',
+      'com.example.rnsmileid',
+      'SID-Arlon',
+      'www.google.com'
+    );
 
   return (
     <View style={styles.container}>
@@ -329,46 +338,44 @@ export default function App() {
           <TouchableOpacity
             style={{ marginTop: 20 }}
             onPress={async () => {
-              try {
-                const data = await RnSmileId.captureSelfie('');
-                const resultCode = data.SID_RESULT_CODE;
-                const resultTag = data.SID_RESULT_TAG;
-                if (resultCode === -1) {
-                  alertDialog(
-                    'Selfie Capture Success',
-                    `Successfully captured selfie with tag ${resultTag}`
-                  );
-                  return;
-                }
+              await consentDialog();
+              const data = await RnSmileId.captureSelfie('', null);
+              const resultCode = data.SID_RESULT_CODE;
+              const resultTag = data.SID_RESULT_TAG;
+              if (resultCode === -1) {
                 alertDialog(
-                  'Selfie Capture Failed',
-                  `Failed selfie capture with error ${resultCode} tag ${resultTag}`
+                  `'Selfie Capture Success',`,
+                  `Successfully captured selfie with tag ${resultTag}`
                 );
-              } catch (e) {
-                alertDialog(
-                  'Selfie Capture Failed',
-                  `Failed selfie capture with error`
-                );
+                return;
               }
+              setLoading(false);
+              alertDialog(
+                `'Selfie Capture failed`,
+                `Failed selfie capture with error ${resultCode} tag ${resultTag}`
+              );``
             }}
           >
             <View style={[styles.textContainer]}>
-              <Text style={[styles.buttonText]}>Selfie Test</Text>
+              <Text style={[styles.buttonText]}>Selfie Tests</Text>
             </View>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={async () => {
-              let dlgHeader = "User Consent";
+              let dlgHeader = 'User Consent';
               try {
                 await consentDialog();
-                dlgHeader = "ID Capture";
-                const data = await RnSmileId.captureIDCard('');
+                dlgHeader = 'ID Capture';
+                const config = {
+                  id_prompt_blurry: 'This is blurry',
+                };
+                const data = await RnSmileId.captureIDCard('', config);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
                   alertDialog(
-                  `${dlgHeader}`,
+                    `${dlgHeader}`,
                     `Successfully captured id card with tag ${resultTag}`
                   );
                   return;
@@ -377,13 +384,10 @@ export default function App() {
                 alertDialog(
                   `${dlgHeader}`,
                   `Failed id card capture with error ${resultCode} tag ${resultTag}`
-                );
+                );``
               } catch (e) {
                 setLoading(false);
-                alertDialog(
-                  `${dlgHeader}`,
-                  `${e}`
-                );
+                alertDialog(`${dlgHeader}`, `${e}`);
               }
             }}
           >
@@ -394,11 +398,17 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
-              let dlgHeader = "User Consent";
+              let dlgHeader = 'User Consent';
               try {
                 await consentDialog();
-                dlgHeader = "Selfie And ID Capture Failed";
-                const data = await RnSmileId.captureSelfieAndIDCard('');
+                dlgHeader = 'Selfie And ID Capture Failed';
+                const config = {
+                  overlay_color: '#ffffff',
+                  capturing_progress_color: '#ff0000',
+                  captured_progress_color: '#0000ff',
+                  capture_title_text: 'TROYGOLD',
+                };
+                const data = await RnSmileId.captureSelfieAndIDCard('', config);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -415,10 +425,7 @@ export default function App() {
                 );
               } catch (e) {
                 setLoading(false);
-                alertDialog(
-                  `${dlgHeader}`,
-                  `${e}`
-                );
+                alertDialog(`${dlgHeader}`, `${e}`);
               }
             }}
           >
@@ -430,7 +437,7 @@ export default function App() {
           <TouchableOpacity
             onPress={async () => {
               try {
-                const data = await RnSmileId.captureSelfie('');
+                const data = await RnSmileId.captureSelfie('', null);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -442,7 +449,7 @@ export default function App() {
                     {},
                     {},
                     {},
-                    ""
+                    ''
                   );
                   await processResponse(result);
                   setLoading(false);
@@ -469,11 +476,11 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
-              let dlgHeader = "User Consent";
+              let dlgHeader = 'User Consent';
               try {
                 await consentDialog();
-                dlgHeader = "Enroll Failed";
-                const data = await RnSmileId.captureSelfieAndIDCard('');
+                dlgHeader = 'Enroll Failed';
+                const data = await RnSmileId.captureSelfieAndIDCard('', null);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -485,7 +492,7 @@ export default function App() {
                     {},
                     {},
                     {},
-                    ""
+                    ''
                   );
 
                   await processResponse(result);
@@ -499,10 +506,7 @@ export default function App() {
                 );
               } catch (e) {
                 setLoading(false);
-                alertDialog(
-                  `${dlgHeader}`,
-                  `${e}`
-                );
+                alertDialog(`${dlgHeader}`, `${e}`);
               }
             }}
           >
@@ -513,11 +517,11 @@ export default function App() {
 
           <TouchableOpacity
             onPress={async () => {
-              let dlgHeader = "User Consent";
+              let dlgHeader = 'User Consent';
               try {
                 await consentDialog();
-                dlgHeader = "Enroll Failed";
-                const data = await RnSmileId.captureSelfie('');
+                dlgHeader = 'Enroll Failed';
+                const data = await RnSmileId.captureSelfie('', null);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -532,10 +536,7 @@ export default function App() {
                 );
               } catch (e) {
                 setLoading(false);
-                alertDialog(
-                  `${dlgHeader}`,
-                  `${e}`
-                );
+                alertDialog(`${dlgHeader}`, `${e}`);
               }
             }}
           >
@@ -556,7 +557,7 @@ export default function App() {
               }
 
               try {
-                const data = await RnSmileId.captureSelfie('');
+                const data = await RnSmileId.captureSelfie('', null);
                 const resultCode = data.SID_RESULT_CODE;
                 const resultTag = data.SID_RESULT_TAG;
                 if (resultCode === -1) {
@@ -571,7 +572,7 @@ export default function App() {
                       },
                       {},
                       {},
-                      ""
+                      ''
                     );
                     await processResponse(result);
                     setLoading(false);
@@ -600,22 +601,44 @@ export default function App() {
             </View>
           </TouchableOpacity>
 
-
           <TouchableOpacity
             onPress={async () => {
-              const result = await RnSmileId.getCurrentTags();
-              console.log("SMILEID TAGS START");
-              console.log(result.tags);
-              console.log("SMILEID TAGS END");
-
-              const result2 = await RnSmileId.getImagesForTag("USER_TAG_02_04_09_42_32");
-              console.log("SMILEID TAGS START");
-              console.log(result2);
-              console.log("SMILEID TAGS END");
+              const data = await RnSmileId.requestBVNConsent(
+                'USER_ID_001',
+                'ic_mushroom',
+                'com.example.rnsmileid',
+                'SID-Arlon',
+                'www.google.com',
+                false
+              );
+              console.log('Japhet starting');
+              console.log(data);
+              console.log('Japhet ending');
             }}
           >
             <View style={[styles.textContainer]}>
               <Text style={[styles.buttonText]}>File Paths Test</Text>
+            </View>
+          </TouchableOpacity>
+
+
+          <TouchableOpacity
+            onPress={async () => {
+              const data = await RnSmileId.requestBVNConsent(
+                'USER_ID_001',
+                'ic_mushroom',
+                'com.example.rnsmileid',
+                'SID-Arlon',
+                'www.google.com',
+                false
+              );
+              console.log('Japhet starting');
+              console.log(data);
+              console.log('Japhet ending');
+            }}
+          >
+            <View style={[styles.textContainer]}>
+              <Text style={[styles.buttonText]}>BVN Consent Test</Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -643,7 +666,7 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
     backgroundColor: '#0A92D4',
     alignItems: 'center',
-    borderRadius: 16
+    borderRadius: 16,
   },
   buttonText: {
     color: '#fff',
