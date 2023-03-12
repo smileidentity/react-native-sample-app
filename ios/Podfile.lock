@@ -126,8 +126,8 @@ PODS:
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
   - OpenSSL-Universal (1.1.1100)
-  - PromisesObjC (2.1.1)
-  - Protobuf (3.21.12)
+  - PromisesObjC (2.2.0)
+  - Protobuf (3.22.1)
   - RCTRequired (0.63.4)
   - RCTTypeSafety (0.63.4):
     - FBLazyVector (= 0.63.4)
@@ -354,10 +354,10 @@ PODS:
     - React-Core (= 0.63.4)
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
-  - rn-smile-id (0.0.36):
+  - rn-smile-id (0.0.37):
     - React-Core
-    - Smile_Identity_SDK (= 2.1.22)
-  - Smile_Identity_SDK (2.1.22):
+    - Smile_Identity_SDK (= 2.1.23)
+  - Smile_Identity_SDK (2.1.23):
     - GoogleMLKit/FaceDetection
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -530,8 +530,8 @@ SPEC CHECKSUMS:
   MLKitVision: 96c96571190b7f63eddf4a12068ce8a8689e0d2c
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
-  PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
-  Protobuf: 120350fc38646e2dedc26f49ecba778184ea1de2
+  PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
+  Protobuf: d7f7c8329edf5eb8af65547a8ba3e9c1cee927d5
   RCTRequired: 082f10cd3f905d6c124597fd1c14f6f2655ff65e
   RCTTypeSafety: 8c9c544ecbf20337d069e4ae7fd9a377aadf504b
   React: b0a957a2c44da4113b0c4c9853d8387f8e64e615
@@ -552,8 +552,8 @@ SPEC CHECKSUMS:
   React-RCTText: 5c51df3f08cb9dedc6e790161195d12bac06101c
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
-  rn-smile-id: 02bf9725096bb8a0c825fdc192f4a62b1f397b9b
-  Smile_Identity_SDK: be4976bec0e1d3d8af5ab63c150f74301b3382f9
+  rn-smile-id: c0de2b88f16027a3e03a3b886dcb13e6b33dd84c
+  Smile_Identity_SDK: cc939bc1b52c6334ff3c5aa85fc089dcaefc3260
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
