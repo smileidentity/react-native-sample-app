@@ -338,7 +338,7 @@ export default function App() {
           <TouchableOpacity
             style={{ marginTop: 20 }}
             onPress={async () => {
-              await consentDialog();
+              // await consentDialog();
               const data = await RnSmileId.captureSelfie('', null);
               const resultCode = data.SID_RESULT_CODE;
               const resultTag = data.SID_RESULT_TAG;

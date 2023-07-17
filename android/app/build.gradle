@@ -189,9 +189,9 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"  // From node_modules
   implementation 'com.android.support:multidex:1.0.3'
-  implementation "com.smileidentity:smile-id-ui:1.0.6"
-  implementation 'com.smileidentity:smile-id-sdk:7.3.22'
-  implementation 'com.smileidentity:netjava:1.0.3'
+  implementation "com.smileidentity:smile-id-ui:1.0.13"
+  implementation 'com.smileidentity:smile-id-sdk:7.3.30'
+  implementation 'com.smileidentity:netjava:1.0.5'
 
 
   implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
